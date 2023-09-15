@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>CloudWorld Demo</title>
+</head>
+<body>
+    <div class="card-panel teal lighten-2 heading"><h2>HELLO CLOUDWORLD!!</h2></div>
+            
+
+    
+    <div class="card-panel teal lighten-2"><h5>List Of Employees</h5></div>
+
+    <table class="striped">
+        <thead>
+          <tr>
+              <th>Employee Number</th>
+              <th>Employee Name</th>
+              <th>Employee Job</th>
+              <th>Employee Salary</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {% for emp in employee %}
+            <tr>
+                <td>{{emp.empno}}</td>
+                <td>{{emp.ename}}</td>
+                <td>{{emp.job}}</td>
+                <td>{{emp.sal}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+
+
+    <span>Developed By: {{developer}}</span>
+</body>
+</html>
